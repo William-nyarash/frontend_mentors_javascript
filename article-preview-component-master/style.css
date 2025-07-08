@@ -1,0 +1,83 @@
+:root {
+    --color-dark-gray :hsl(217, 19%, 35%);
+    --color-saturated: hsl(214, 17%, 51%);
+    --color-gray-blue:hsl(212, 23%, 69%);
+    --color-light: hsl(210, 46%,95%);
+}
+*::after,
+*::before,
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-size: 13px;
+     font-family: "Manrope", sans-serif;
+    background-color: var(--color-gray-blue);
+}
+img {
+    width: 100%;
+    max-height: 100%;
+}
+.main{
+    width: 90%;
+    max-width: 600px;
+    margin:0 auto;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: var(--color-light);
+}
+
+.text,
+.user {
+    width: 90%;
+    margin:0 auto;
+}
+
+.text .heading {
+    font-weight: 700;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.user .date ,
+.text .description {
+    color:var(--color-gray-blue);
+    font-weight: 500;
+}
+.user-img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.user .user-name {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: .2em;
+}
+
+.share-cls {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-gray-blue)
+}
+.share {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
