@@ -1,8 +1,8 @@
 :root {
     --color-dark-gray :hsl(217, 19%, 35%);
     --color-saturated: hsl(214, 17%, 51%);
-    --color-gray-blue:hsl(212, 23%, 69%);
-    --color-light: hsl(210, 46%,95%);
+    --color-gray-blue:rgb(233 240 246);
+    --color-light: rgb(255 255 255);
 }
 *::after,
 *::before,
@@ -14,6 +14,7 @@ body {
     font-size: 13px;
      font-family: "Manrope", sans-serif;
     background-color: var(--color-gray-blue);
+
 }
 img {
     width: 100%;
@@ -22,36 +23,50 @@ img {
 .main{
     width: 90%;
     max-width: 600px;
-    margin:0 auto;
+   margin: 2em auto 0 auto;
     border-radius: 16px;
     overflow: hidden;
     background-color: var(--color-light);
+    margin-bottom: 3em;
+}
+.text {
+    margin-top:2em;
 }
 
 .text,
 .user {
     width: 90%;
-    margin:0 auto;
+    margin-inline:  auto;
 }
 
 .text .heading {
     font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.heading ,
+.user-name {
+    color:  rgb(72 73 89);
 }
 
 .user {
     display: flex;
     align-items: center;
+    gap: 0.2em;
     justify-content: space-between;
     margin-bottom: 2em;
 }
 .user .date ,
 .text .description {
-    color:var(--color-gray-blue);
+    color:rgb(143 146 156);
     font-weight: 500;
 }
+.text .description {
+    margin-bottom: 2.5em;
+}
 .user-img{
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -65,19 +80,50 @@ img {
 }
 
 .share-cls {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--color-gray-blue)
-}
+        margin-left: 4em;
+} 
 .share {
-    width: 25px;
-    height: 25px;
+width: 28px;
+    height: 28px;
     border-radius: 50%;
+    background-color: rgb(212 217 223);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.49em
+}
+.social_links {
+    display: none;
+}
+
+.shared{
+    background: #4a516c;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap:2em;
+    padding: 2em;
+    align-items: center;
+    height: 75px;
+}
+.hide_from_view {
+    display:none;
+}
+.social_text {
+    text-transform: uppercase;
+    font-weight: 700;
+    color:rgb(139 146 173);
+    font-size: 1.2rem;
+}
+.shareb{
+    padding: 1.2em;
+    margin-left: 5em;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgb(212 217 223);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.49em;
 }
