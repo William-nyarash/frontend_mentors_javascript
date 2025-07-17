@@ -1,22 +1,42 @@
-const btn = document.getElementById('share');
+const shareBtn = document.getElementById('share');
 const social = document.querySelector('.social_links'); 
-const hide = document.querySelector('.user');
-const clear = document.querySelector(".clear");
+const userInfo = document.querySelector('.user');
+const shareb  =document.querySelector('.shareb');
+const arrowDown = document.querySelector('.arrow-side');
 
-const showSocials = () => {
+let isVisible = false;
+
+const toggleSocialLinks = () => {
+  if (!shareBtn || !social || !userInfo || !arrowDown) return;
+
+  isVisible = !isVisible;
+
+  if (isVisible) {
     social.classList.add('shared');
     social.style.display = 'flex';
-    hide.classList.add('hide_from_view');
-}
-
-const hideSocials = () => {
+    userInfo.classList.add('hide_from_view');
+  } else {
     social.classList.remove('shared');
     social.style.display = 'none';
-    hide.classList.remove('hide_from_view');
-}
+    userInfo.classList.remove('hide_from_view');
+  }
+};
 
-btn.addEventListener('mousedown', showSocials);
-btn.addEventListener('touchstart', showSocials);
+const mediaQuery = window.matchMedia('(min-width: 30rem)');
 
-clear.addEventListener('mouseup', hideSocials );
-clear.addEventListener('touchend', hideSocials);
+shareBtn.addEventListener('click', (e) => {
+  if (mediaQuery.matches) {
+    toggleSocialLinks();
+  }
+});
+
+shareBtn.addEventListener('touchstart', (e) => {
+  e.preventDefault();
+    toggleSocialLinks();
+});
+shareb.addEventListener('touchend', (e) => {
+  e.preventDefault();
+    social.classList.remove('shared');
+    social.style.display = 'none';
+    userInfo.classList.remove('hide_from_view');
+})
