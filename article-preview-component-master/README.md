@@ -25,7 +25,7 @@ desktop view
 ### Links
 
 - Solution: [github repo](https://github.com/William-nyarash/frontend_mentors_javascript.git)
-- Live : [Add live site URL here](https://your-live-site-url.com)
+- Live : [here](https://frontend-mentors-javascript.onrender.com)
 
 ## My process
 I began by designing  the mobile view then proceeded to the desktop view 
